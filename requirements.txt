@@ -4,3 +4,6 @@ torch
 pydantic
 numpy
 scikit-learn
+python-multipart
+pandas
+streamlit
