@@ -47,7 +47,7 @@ if st.button("Scan Transaction"):
 
 st.markdown("---")
 st.header("📂 Batch Processing (CSV Upload)")
-st.write("Upload a CSV containing transactions. The system will append `Reconstruction_MSE` and `Is_Fraud` columns.")
+st.write("Upload a CSV containing transactions. The system will append `Reconstruction_MSE` and `T_F` columns.")
 uploaded_file = st.file_uploader("Upload CSV", type=["csv"])
 if uploaded_file is not None:
     if st.button("Process CSV Data"):
@@ -71,7 +71,7 @@ if uploaded_file is not None:
                 mses = torch.mean((t_features - reconstructions) ** 2, dim=1).cpu().numpy()
             
             df['Reconstruction_MSE'] = mses
-            df['Is_Fraud'] = mses > ANOMALY_THRESHOLD
+            df['T_F'] = mses > ANOMALY_THRESHOLD
             
             st.success("✅ Processing complete. You can preview and download the results below.")
             
