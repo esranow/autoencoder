@@ -4,10 +4,11 @@ import pandas as pd
 import io
 
 # Import the model architecture and configuration from main.py
-from main import Autoencoder, ANOMALY_THRESHOLD, device, model
+from main import Autoencoder, ANOMALY_THRESHOLD, device
 
 # Make sure model is evaluated
 try:
+    model = Autoencoder()
     model.load_state_dict(torch.load("model/fraud_autoencoder.pth", map_location=device, weights_only=True))
     model.eval().to(device)
 except Exception as e:
