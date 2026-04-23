@@ -1,5 +1,7 @@
 # 🕵️ Fraud Detection Autoencoder
 
+try @ https://autoencoder-8as8fz6ezcxv7z9gs9khfv.streamlit.app/
+
 This repository contains an end-to-end Machine Learning pipeline and web portal using a **Deep Learning Autoencoder** designed specifically to detect fraudulent financial transactions. It provides a robust, fast, and scalable solution packed with an interactive Streamlit UI and a production-ready FastAPI backend.
 
 ## 🧠 Why an Autoencoder Approach?
